@@ -13,8 +13,8 @@
 
         <!-- CORPO ESERCIZIO -->
         <div id="app">
-            <ul v-for="mail in mails">
-                <li :class="mails.length < 10 ? 'hidden':''">{{mail}}</li>
+            <ul :class="mails.length < 10 ? 'hidden':''">
+                <li v-for="mail in mails">{{mail}}</li>
             </ul>
         </div>
 
