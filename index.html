@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Vue Email List</title>
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <link rel="stylesheet" href="./css/style.css">
     </head>
     <body>
         <!-- VUE -->
@@ -12,8 +13,8 @@
 
         <!-- CORPO ESERCIZIO -->
         <div id="app">
-            <ul>
-                <li v-for="mail in mails" >{{mail}}</li>
+            <ul v-for="mail in mails">
+                <li :class="mails.length < 10 ? 'hidden':''">{{mail}}</li>
             </ul>
         </div>
 
